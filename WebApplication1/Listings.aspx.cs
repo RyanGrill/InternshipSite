@@ -13,5 +13,10 @@ namespace InternshipSite.Forms
         {
 
         }
+
+        protected void grdListings_PreRender(object sender, EventArgs e)
+        {
+            grdListings.HeaderRow.TableSection = TableRowSection.TableHeader;
+        }
     }
 }
