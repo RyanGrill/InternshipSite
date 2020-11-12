@@ -11,6 +11,7 @@ namespace InternshipSite.Forms
     {
         protected void btnAddPost_Click(object sender, EventArgs e)
         {
+            //insert using parameters from reply page
             SqlDataSource1.InsertParameters["Title"].DefaultValue = txtQuestion.Text;
             SqlDataSource1.InsertParameters["PostBody"].DefaultValue = txtQuestionDesc.Text;
             try

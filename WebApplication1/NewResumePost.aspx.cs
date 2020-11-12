@@ -12,17 +12,15 @@ namespace WebApplication1.Content
 {
     public partial class NewResumePost : System.Web.UI.Page
     {
+        //db connection string
         public string url = ConfigurationManager.ConnectionStrings["InternshipSiteDBConnectionString"].ConnectionString;
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
 
         protected void SubmitResumeButton_Click(object sender, EventArgs e)
         {
+            //check if there is a file in the file upload
             if (FileUpload1.HasFile)
             {
+                //check file path to ensure correct doc type
                 string[] allowedFile = { ".doc", ".docx"};
                 string path = string.Concat(Server.MapPath("~/UploadedItems/" + FileUpload1.PostedFile.FileName));
                 FileUpload1.SaveAs(path);
@@ -33,7 +31,7 @@ namespace WebApplication1.Content
                 }
                 else
                 {
-                    
+                    //convert file to byte array, and insert it alongside other post data
                     byte[] fileBytes = File.ReadAllBytes(path);
                     using (var conn = new OleDbConnection(url))
                     {
