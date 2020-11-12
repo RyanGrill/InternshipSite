@@ -173,6 +173,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="NewResumePost.aspx" />
     <Content Include="ErrorMessage.aspx" />
     <Content Include="Resources.aspx" />
     <Content Include="favicon.ico" />
@@ -190,11 +191,12 @@
     <Content Include="InternshipSiteDB.mdb" />
     <Content Include="Discussion\WebForm1.aspx" />
     <Content Include="ResumeReview.aspx" />
-    <Content Include="ViewPost.aspx" />
+    <Content Include="ViewDiscussionPost.aspx" />
+    <Content Include="ViewResumePost.aspx" />
     <Content Include="Welcome.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Listings.aspx" />
-    <Content Include="NewPost.aspx" />
+    <Content Include="NewDiscussionPost.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -343,6 +345,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="NewResumePost.aspx.cs">
+      <DependentUpon>NewResumePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewResumePost.aspx.designer.cs">
+      <DependentUpon>NewResumePost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ErrorMessage.aspx.cs">
       <DependentUpon>ErrorMessage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -370,12 +379,12 @@
     <Compile Include="Models\PostList.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="NewPost.aspx.cs">
-      <DependentUpon>NewPost.aspx</DependentUpon>
+    <Compile Include="NewDiscussionPost.aspx.cs">
+      <DependentUpon>NewDiscussionPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NewPost.aspx.designer.cs">
-      <DependentUpon>NewPost.aspx</DependentUpon>
+    <Compile Include="NewDiscussionPost.aspx.designer.cs">
+      <DependentUpon>NewDiscussionPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Discussion\WebForm1.aspx.cs">
@@ -414,12 +423,19 @@
     <Compile Include="StudentDiscussion.aspx.designer.cs">
       <DependentUpon>StudentDiscussion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPost.aspx.cs">
-      <DependentUpon>ViewPost.aspx</DependentUpon>
+    <Compile Include="ViewDiscussionPost.aspx.cs">
+      <DependentUpon>ViewDiscussionPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPost.aspx.designer.cs">
-      <DependentUpon>ViewPost.aspx</DependentUpon>
+    <Compile Include="ViewDiscussionPost.aspx.designer.cs">
+      <DependentUpon>ViewDiscussionPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewResumePost.aspx.cs">
+      <DependentUpon>ViewResumePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewResumePost.aspx.designer.cs">
+      <DependentUpon>ViewResumePost.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -445,6 +461,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UploadedItems\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

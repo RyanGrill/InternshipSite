@@ -1,4 +1,4 @@
-﻿<%@ Page Title="New Post" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NewPost.aspx.cs" Inherits="InternshipSite.Forms.WebForm2" %>
+﻿<%@ Page Title="New Post" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NewDiscussionPost.aspx.cs" Inherits="InternshipSite.Forms.WebForm2" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
     <div class="col-sm-3">Enter your question:</div>
     <div class="col-sm-7">
@@ -9,7 +9,7 @@
     </div> 
     <div class="col-sm-3">Enter a description of the question:</div>
     <div class="col-sm-7">
-        <asp:TextBox ID="txtQuestionDesc" runat="server" Rows="4" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
+        <asp:TextBox ID="txtQuestionDesc" runat="server" Rows="6" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                 ControlToValidate="txtQuestion" ErrorMessage="A description is required" 
                 Display="Dynamic" CssClass="text-danger" ValidationGroup="Add"/>

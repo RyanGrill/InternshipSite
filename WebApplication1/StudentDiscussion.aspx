@@ -45,7 +45,7 @@
          <ItemTemplate>
              <tr style="">
                  <td>
-                     <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl= '<%# "ViewPost.aspx?id="+Eval("PostID") %>' Text='<%# Eval("Title") %>' Font-Size="Medium"></asp:LinkButton>
+                     <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl= '<%# "ViewDiscussionPost.aspx?id="+Eval("PostID") %>' Text='<%# Eval("Title") %>' Font-Size="Medium"></asp:LinkButton>
                  </td>
         </ItemTemplate>
         <LayoutTemplate>
@@ -81,6 +81,6 @@
        </asp:ListView>
 
     
-    <asp:Button ID="btnNewQuestion" runat="server" Text="New Question" PostBackUrl="NewPost.aspx" CssClass="btn btn-primary"/>
+    <asp:Button ID="btnNewQuestion" runat="server" Text="New Question" PostBackUrl="NewDiscussionPost.aspx" CssClass="btn btn-primary"/>
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:InternshipSiteDBConnectionString %>" ProviderName="<%$ ConnectionStrings:InternshipSiteDBConnectionString.ProviderName %>" SelectCommand="SELECT [PostID],[Title], [PostBody] FROM [QAPosts] WHERE [ReplyID] = 0"></asp:SqlDataSource>
 </asp:Content>

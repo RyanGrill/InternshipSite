@@ -16,12 +16,12 @@ namespace InternshipSite.Forms
             try
             {
                 SqlDataSource1.Insert();
-                Response.Redirect("~/QAPosts/StudentQA");
+                Response.Redirect("~/StudentDiscussion");
             }
             catch (Exception ex)
             {
                 Session["Exception"] = ex;
-                Session["Page"] = "~/QAPosts/NewPost";
+                Session["Page"] = "~/NewDiscussionPost";
                 Response.Redirect("~/ErrorMessage");
             }
 
