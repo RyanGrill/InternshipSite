@@ -23,7 +23,7 @@ namespace WebApplication1.Content
         {
             if (FileUpload1.HasFile)
             {
-                string[] allowedFile = { ".doc", ".docx", ".pdf" };
+                string[] allowedFile = { ".doc", ".docx"};
                 string path = string.Concat(Server.MapPath("~/UploadedItems/" + FileUpload1.PostedFile.FileName));
                 FileUpload1.SaveAs(path);
 
@@ -46,6 +46,7 @@ namespace WebApplication1.Content
                             try
                             {
                                 cmd.ExecuteNonQuery();
+                                File.Delete(path);
                                 Response.Redirect("~/ResumeReview");
                             }
                             catch(Exception ex)

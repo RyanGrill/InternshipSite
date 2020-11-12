@@ -4,7 +4,7 @@
         New Resume Post
     </h3>
     
-    <asp:Label ID="UploadInstructLabel" Text="Upload a resume here (pdf/doc/docx only please): " runat="server" Font-Bold="true"></asp:Label>
+    <asp:Label ID="UploadInstructLabel" Text="Upload a resume here (doc/docx only please): " runat="server" Font-Bold="true"></asp:Label>
     <asp:FileUpload ID="FileUpload1" runat="server" />
     <asp:Label ID="fileWarningLabel" Text="File is not of correct file type" CssClass="text-danger" runat="server" Visible="false"></asp:Label>
     <br /> 
