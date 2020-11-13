@@ -2,11 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:ListView ID="ListView1" runat="server">
         <ItemTemplate>
-            <asp:Label ID="titleLabel" runat="server" Text='<%# Bind("Title") %>' Font-Size="X-Large" Font-Bold="true"></asp:Label>
-            <br />
-            <asp:Label ID="bodyLabel" runat="server" Text='<%# Bind("PostBody") %>' Font-Size="Medium"></asp:Label>
-            <br />
-            <br />
+            <div class="panel panel-default">
+                <asp:Label ID="titleLabel" runat="server" Text='<%# Bind("Title") %>' Font-Size="X-Large" Font-Bold="true"></asp:Label>
+                <br />
+                <asp:Label ID="bodyLabel" runat="server" Text='<%# Bind("PostBody") %>' Font-Size="Medium"></asp:Label>
+                <br />
+            </div>
         </ItemTemplate>
     </asp:ListView>
     <asp:Button ID="btnReply" runat="server" Text="Reply" OnClick="btnReply_Click"/>

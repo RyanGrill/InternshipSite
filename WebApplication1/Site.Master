@@ -49,10 +49,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="Listings.aspx">Jobs</a></li>
+                        <li><a href="JobPostings.aspx">Jobs</a></li>
                         <li><a href="StudentDiscussion">Discussion</a></li>
                         <li><a href="ResumeReview.aspx">Resume Review</a></li>
-                        <li><a href="FAQ.aspx">Resources</a></li>
+                        <li><a href="Resources.aspx">Resources</a></li>
                        
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">

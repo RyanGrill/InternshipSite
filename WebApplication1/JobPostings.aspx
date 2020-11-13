@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Listings.aspx.cs" Inherits="InternshipSite.Forms.Listings" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="JobPostings.aspx.cs" Inherits="InternshipSite.Forms.Listings" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
     <div class="row">
         <div class="col-sm-6 table-responsive">
@@ -47,6 +47,8 @@
                         Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
+
+            <asp:Button ID="btnAddPosting" runat="server" PostBackUrl="~/NewJobPosting.aspx" Text="Add New Posting" />
         </div>
     </div>
     

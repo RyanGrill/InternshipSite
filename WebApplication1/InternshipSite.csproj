@@ -173,6 +173,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="NewJobPosting.aspx" />
     <Content Include="NewResumePost.aspx" />
     <Content Include="ErrorMessage.aspx" />
     <Content Include="Resources.aspx" />
@@ -195,7 +196,7 @@
     <Content Include="ViewResumePost.aspx" />
     <Content Include="Welcome.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Listings.aspx" />
+    <Content Include="JobPostings.aspx" />
     <Content Include="NewDiscussionPost.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -233,7 +234,6 @@
     </Content>
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="Site1.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -345,6 +345,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="NewJobPosting.aspx.cs">
+      <DependentUpon>NewJobPosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewJobPosting.aspx.designer.cs">
+      <DependentUpon>NewJobPosting.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewResumePost.aspx.cs">
       <DependentUpon>NewResumePost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -369,15 +376,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Listings.aspx.cs">
-      <DependentUpon>Listings.aspx</DependentUpon>
+    <Compile Include="JobPostings.aspx.cs">
+      <DependentUpon>JobPostings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Listings.aspx.designer.cs">
-      <DependentUpon>Listings.aspx</DependentUpon>
+    <Compile Include="JobPostings.aspx.designer.cs">
+      <DependentUpon>JobPostings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\PostList.cs" />
-    <Compile Include="Models\Post.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="NewDiscussionPost.aspx.cs">
       <DependentUpon>NewDiscussionPost.aspx</DependentUpon>
@@ -407,13 +412,6 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="StudentDiscussion.aspx.cs">
