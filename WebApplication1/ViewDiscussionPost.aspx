@@ -7,6 +7,7 @@
                 <br />
                 <asp:Label ID="bodyLabel" runat="server" Text='<%# Bind("PostBody") %>' Font-Size="Medium"></asp:Label>
                 <br />
+                
             </div>
         </ItemTemplate>
     </asp:ListView>
@@ -25,6 +26,6 @@
             <asp:Parameter Name="ReplyID" Type="Int32" />
         </InsertParameters>
     </asp:SqlDataSource>
-
+    <asp:Button ID="btnDelete" runat="server" Text="Delete Post And Replies" Visible="false" OnClick="btnDelete_Click"/>
 </asp:Content>
 

@@ -4,21 +4,21 @@
     <div class="col-sm-7">
         <asp:TextBox ID="txtTitle" runat="server" Rows="2" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                ControlToValidate="txtQuestion" ErrorMessage="The question being asked is required" 
+                ControlToValidate="txtTitle" ErrorMessage="A title for the posting is required" 
                 Display="Dynamic" CssClass="text-danger" ValidationGroup="Add"/>
     </div> 
     <div class="col-sm-3">Enter a description of the job:</div>
     <div class="col-sm-7">
         <asp:TextBox ID="txtPostingDesc" runat="server" Rows="6" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                ControlToValidate="txtQuestion" ErrorMessage="A description is required" 
+                ControlToValidate="txtPostingDesc" ErrorMessage="A description is required" 
                 Display="Dynamic" CssClass="text-danger" ValidationGroup="Add"/>
     </div>
     <div class="col-sm-3">Enter the web address for the application:</div>
     <div class="col-sm-7">
         <asp:TextBox ID="txtPostLink" runat="server" Rows="2" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-            ControlToValidate="txtQuestion" ErrorMessage="A web address is required" 
+            ControlToValidate="txtPostLink" ErrorMessage="A web address is required" 
             Display="Dynamic" CssClass="text-danger" ValidationGroup="Add"/>
     </div>
     
@@ -33,5 +33,5 @@
         </InsertParameters>
     </asp:SqlDataSource>
 
-    <asp:Button ID="btnAddPosting" runat="server" Text="Submit Question" CssClass="btn btn-primary" ValidationGroup="Add" OnClick="btnAddPosting_Click" />
+    <asp:Button ID="btnAddPosting" runat="server" Text="Submit Posting" CssClass="btn btn-primary" ValidationGroup="Add" OnClick="btnAddPosting_Click" />
 </asp:Content>

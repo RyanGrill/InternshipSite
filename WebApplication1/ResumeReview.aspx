@@ -5,13 +5,6 @@
     </h3>
 
     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-        <AlternatingItemTemplate>
-            <tr style="">
-                <td>
-                    <asp:Label ID="TitleLabel" runat="server" Text='<%# Eval("Title") %>' />
-                </td>
-            </tr>
-        </AlternatingItemTemplate>
          <EditItemTemplate>
              <tr style="">
                  <td>

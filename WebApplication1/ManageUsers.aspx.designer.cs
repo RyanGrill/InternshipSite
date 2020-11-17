@@ -10,78 +10,87 @@
 namespace WebApplication1 {
     
     
-    public partial class ViewDiscussionPost {
+    public partial class ManageUsers {
         
         /// <summary>
-        /// ListView1 control.
+        /// grdUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.GridView grdUsers;
         
         /// <summary>
-        /// btnReply control.
+        /// dvUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReply;
+        protected global::System.Web.UI.WebControls.DetailsView dvUsers;
         
         /// <summary>
-        /// replyInstructLabel control.
+        /// ddlUsers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label replyInstructLabel;
+        protected global::System.Web.UI.WebControls.DropDownList ddlUsers;
         
         /// <summary>
-        /// txtReplyTitle control.
+        /// ddlRoles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtReplyTitle;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRoles;
         
         /// <summary>
-        /// txtReplyDesc control.
+        /// btnAddRoles control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtReplyDesc;
+        protected global::System.Web.UI.WebControls.Button btnAddRoles;
         
         /// <summary>
-        /// btnSubmitReply control.
+        /// lblAddRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitReply;
+        protected global::System.Web.UI.WebControls.Label lblAddRole;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// lblInstruct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.Label lblInstruct;
         
         /// <summary>
-        /// btnDelete control.
+        /// txtRoleName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::System.Web.UI.WebControls.TextBox txtRoleName;
+        
+        /// <summary>
+        /// btnAddRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddRole;
     }
 }

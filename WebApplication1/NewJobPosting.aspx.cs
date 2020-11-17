@@ -19,11 +19,11 @@ namespace WebApplication1
             //insert using parameters from reply page
             SqlDataSource1.InsertParameters["PostingTitle"].DefaultValue = txtTitle.Text;
             SqlDataSource1.InsertParameters["PostingBody"].DefaultValue = txtPostingDesc.Text;
-            SqlDataSource1.InsertParameters["txtPostLink"].DefaultValue = txtPostingDesc.Text;
+            SqlDataSource1.InsertParameters["PostingLink"].DefaultValue = txtPostLink.Text;
             try
             {
                 SqlDataSource1.Insert();
-                Response.Redirect("~/JobPostings");
+                Response.Redirect("~/JobPostings", false);
             }
             catch (Exception ex)
             {

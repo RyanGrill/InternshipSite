@@ -53,6 +53,7 @@
                         <li><a href="StudentDiscussion">Discussion</a></li>
                         <li><a href="ResumeReview.aspx">Resume Review</a></li>
                         <li><a href="Resources.aspx">Resources</a></li>
+                        <li><a href="ManageUsers.aspx">Manage Users</a></li>
                        
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">

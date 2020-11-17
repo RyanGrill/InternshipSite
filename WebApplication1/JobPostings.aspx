@@ -9,6 +9,7 @@
                 CssClass="table table-bordered table-condensed" OnPreRender="grdListings_PreRender">
                 <Columns>
                     <asp:BoundField DataField="PostingTitle" HeaderText="PostingTitle" SortExpression="PostingTitle" />
+                    <asp:CommandField ShowSelectButton="true" />
                 </Columns>
                 <HeaderStyle CssClass="header" />
                 <AlternatingRowStyle CssClass="active" />
@@ -24,8 +25,8 @@
 
         <div class="col-sm-6 ">
             <%-- Posting DetailsView --%>
-            <asp:DetailsView ID="dtlCustomer" runat="server" DataSourceID="SqlDataSource2" 
-                AutoGenerateRows="False" 
+            <asp:DetailsView ID="dtlPosting" runat="server" DataSourceID="SqlDataSource2" 
+                AutoGenerateRows="False" OnItemDeleted="dtlPosting_ItemDeleted"
                 CssClass="table table-bordered table-condensed" DataKeyNames="ID">
                 <HeaderTemplate>
                     <p>Job Listing:</p>
@@ -34,21 +35,26 @@
                 <Fields>
                     <asp:BoundField DataField="PostingTitle" SortExpression="PostingTitle" />
                     <asp:BoundField DataField="PostingBody" SortExpression="PostingBody"/>
-                    <asp:HyperLinkField DataNavigateUrlFields="PostingLink" DataTextField="PostingLink" SortExpression="PostingLink"  />
+                    <asp:HyperLinkField DataNavigateUrlFields="PostingLink" DataTextField="PostingLink" SortExpression="PostingLink"/>
                 </Fields>
             </asp:DetailsView>
             <%-- Sql data source --%>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server"
                 ConnectionString="<%$ ConnectionStrings:InternshipSiteDBConnectionString %>"  
-                SelectCommand="SELECT [ID], [PostingTitle], [PostingBody], [PostingLink] FROM [JobPostings] WHERE ([ID] = @ID)" 
+                SelectCommand="SELECT [ID], [PostingTitle], [PostingBody], [PostingLink] FROM [JobPostings] WHERE ([ID] = @ID)"
+                DeleteCommand="DELETE FROM [JobPostings] WHERE ([ID] = @original_ID)"
                 ProviderName="<%$ ConnectionStrings:InternshipSiteDBConnectionString.ProviderName %>">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="grdListings" Name="ID" PropertyName="SelectedValue"
                         Type="Int32" />
                 </SelectParameters>
+                <DeleteParameters>
+                    <asp:Parameter Name="ID" Type="Int32" />
+                </DeleteParameters>
             </asp:SqlDataSource>
 
-            <asp:Button ID="btnAddPosting" runat="server" PostBackUrl="~/NewJobPosting.aspx" Text="Add New Posting" />
+            <asp:Button ID="btnAddPosting" runat="server" PostBackUrl="~/NewJobPosting.aspx" Text="Add New Posting" Visible="false"/>
+
         </div>
     </div>
     

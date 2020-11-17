@@ -6,24 +6,6 @@
     </h3> 
     
     <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-        <AlternatingItemTemplate>
-            <tr style="">
-                <td>
-                    <asp:Label ID="TitleLabel" runat="server" Text='<%# Eval("Title") %>' />
-                </td>
-            </tr>
-        </AlternatingItemTemplate>
-         <EditItemTemplate>
-             <tr style="">
-                 <td>
-                     <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                 </td>
-                 <td>
-                     <asp:TextBox ID="TitleTextBox" runat="server" Text='<%# Bind("Title") %>' />
-                 </td>
-             </tr>
-         </EditItemTemplate>
          <EmptyDataTemplate>
              <table runat="server" style="">
                  <tr>
@@ -67,11 +49,6 @@
             </table>
         </LayoutTemplate>
          <SelectedItemTemplate>
-             <tr style="">
-                 <td>
-                     <asp:Label ID="TitleLabel" runat="server" Text='<%# Eval("Title") %>' />
-                 </td>
-             </tr>
              <asp:DataPager ID="DataPager1" runat="server" PageSize="4">
                     <Fields>
                         <asp:NextPreviousPagerField ButtonType="Link" />

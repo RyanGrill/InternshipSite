@@ -17,7 +17,7 @@ namespace InternshipSite.Forms
             try
             {
                 SqlDataSource1.Insert();
-                Response.Redirect("~/StudentDiscussion");
+                Response.Redirect("~/StudentDiscussion.aspx", false);
             }
             catch (Exception ex)
             {

@@ -173,6 +173,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="ManageUsers.aspx" />
     <Content Include="NewJobPosting.aspx" />
     <Content Include="NewResumePost.aspx" />
     <Content Include="ErrorMessage.aspx" />
@@ -190,7 +191,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Account\Web.config" />
     <Content Include="InternshipSiteDB.mdb" />
-    <Content Include="Discussion\WebForm1.aspx" />
     <Content Include="ResumeReview.aspx" />
     <Content Include="ViewDiscussionPost.aspx" />
     <Content Include="ViewResumePost.aspx" />
@@ -345,6 +345,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="ManageUsers.aspx.cs">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.aspx.designer.cs">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewJobPosting.aspx.cs">
       <DependentUpon>NewJobPosting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -392,13 +399,6 @@
       <DependentUpon>NewDiscussionPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Discussion\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Discussion\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

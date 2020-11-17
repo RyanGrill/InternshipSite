@@ -18,6 +18,11 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(IsAdmin())
+            {
+                btnDelete.Visible = true;
+            }
+            
             //get post id, establish connection
             string postID = Request["id"];
             OleDbConnection connection = new OleDbConnection(url);
@@ -61,6 +66,39 @@ namespace WebApplication1
             catch (Exception ex)
             {
                 //catch error, redirect to error page
+                Session["Exception"] = ex;
+                Session["Page"] = "ViewDiscussionPost.aspx?id=" + postID;
+                Response.Redirect("~/ErrorMessage");
+            }
+        }
+
+        protected bool IsAdmin()
+        {
+            return User.IsInRole("admin");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            string postID = Request["id"];
+            OleDbConnection connection = new OleDbConnection(url);
+
+            string deleteCommand = "DELETE FROM QAPosts WHERE PostID=@id OR ReplyID=@id";
+            OleDbCommand dbCommand = new OleDbCommand(deleteCommand, connection);
+            OleDbParameter parameter = new OleDbParameter("id", OleDbType.VarChar, 5);
+            dbCommand.Parameters.Add(parameter).Value = postID;
+
+            try
+            {
+                using (connection)
+                {
+                    connection.Open();
+                    dbCommand.ExecuteNonQuery();
+                }
+                
+                Response.Redirect("~/StudentDiscussion", false);
+            }
+            catch(Exception ex)
+            {
                 Session["Exception"] = ex;
                 Session["Page"] = "ViewDiscussionPost.aspx?id=" + postID;
                 Response.Redirect("~/ErrorMessage");

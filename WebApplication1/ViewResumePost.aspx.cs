@@ -18,6 +18,11 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(IsAdmin())
+            {
+                btnDelete.Visible = true;
+            }
+            
             //request post id passed from previous page
             string postID = Request["id"];
             //create connection and open it
@@ -79,7 +84,7 @@ namespace WebApplication1
             {
                 //catch failure, redirect to error page
                 Session["Exception"] = ex;
-                Session["Page"] = "ViewDiscussionPost.aspx?id=" + postID;
+                Session["Page"] = "ViewResumePost.aspx?id=" + postID;
                 Response.Redirect("~/ErrorMessage");
             }
         }
@@ -92,6 +97,29 @@ namespace WebApplication1
             txtReplyTitle.Visible = true;
             txtReplyDesc.Visible = true;
             btnSubmitReply.Visible = true;
+        }
+
+        protected bool IsAdmin()
+        {
+            return User.IsInRole("admin");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            string postID = Request["id"];
+            OleDbConnection connection = new OleDbConnection(url);
+
+            string deleteCommand = "DELETE FROM ResumePosts WHERE ID=@id OR ReplyID=@id";
+            OleDbCommand dbCommand = new OleDbCommand(deleteCommand, connection);
+            OleDbParameter parameter = new OleDbParameter("id", OleDbType.VarChar, 5);
+            dbCommand.Parameters.Add(parameter).Value = postID;
+
+            using (connection)
+            {
+                connection.Open();
+                dbCommand.ExecuteNonQuery();
+            }
+            Response.Redirect("~/ResumeReview", false);
         }
     }
 }
