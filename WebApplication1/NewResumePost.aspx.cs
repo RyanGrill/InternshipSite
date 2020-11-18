@@ -45,7 +45,7 @@ namespace WebApplication1.Content
                             {
                                 cmd.ExecuteNonQuery();
                                 File.Delete(path);
-                                Response.Redirect("~/ResumeReview");
+                                Response.Redirect("~/ResumeReview", false);
                             }
                             catch(Exception ex)
                             {
